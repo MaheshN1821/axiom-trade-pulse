@@ -67,7 +67,7 @@ export function ChainSelector({ open, onOpenChange }: ChainSelectorProps) {
 					>
 						<div className="flex items-center gap-2">
 							<img
-								src="/images/sol-fill.svg"
+								src="/images/bnb-fill.svg"
 								alt="BNB"
 								width={18}
 								height={18}
@@ -83,38 +83,3 @@ export function ChainSelector({ open, onOpenChange }: ChainSelectorProps) {
 		</div>
 	);
 }
-
-// above correct
-
-// "use client";
-
-// export default function ChainSelector() {
-// 	return (
-// 		<button
-// 			type="button"
-// 			className="
-//         hidden sm:flex
-//         h-[32px]
-//         pl-[8px] pr-[6px]
-//         gap-[6px]
-//         items-center
-//         rounded-full
-//         border-[2px]
-//         transition-all duration-150 ease-in-out
-//         active:scale-[0.96]
-//         hover:brightness-125
-//       "
-// 			style={{ borderColor: "rgba(20, 241, 149, 0.1)" }}
-// 		>
-// 			<img
-// 				src="/images/sol-fill.svg"
-// 				alt="Solana"
-// 				className="w-[16px] h-[16px]"
-// 			/>
-
-// 			<span className="text-[14px] font-medium text-textPrimary">SOL</span>
-
-// 			<i className="ri-arrow-down-s-line text-[18px] text-textPrimary" />
-// 		</button>
-// 	);
-// }

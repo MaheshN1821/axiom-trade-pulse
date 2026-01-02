@@ -183,6 +183,17 @@ body {
 	}
 }
 
+.shimmer {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.04) 25%,
+		rgba(255, 255, 255, 0.08) 37%,
+		rgba(255, 255, 255, 0.04) 63%
+	);
+	background-size: 1000px 100%;
+	animation: shimmer 1.4s ease-in-out infinite;
+}
+
 .dark {
 	--background: #06070b;
 	--background-secondary: 16 17 20;
@@ -200,4 +211,89 @@ body {
 
 	--primary-green: 20 241 149;
 	--primary-yellow: 255 196 0;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 2px;
+	padding: 2px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 3px;
+	border: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #5b6075;
+	border-radius: 3px;
+	border: none;
+	transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #6b7280;
+}
+
+::-webkit-scrollbar-button {
+	height: 6px;
+	background: transparent;
+	display: block;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+	border-width: 0px 3px 3px 3px;
+	border-style: solid;
+	border-color: #5b6075 transparent transparent transparent;
+	background: transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+	border-width: 3px 3px 0 3px;
+	border-style: solid;
+	border-color: #5b7280 transparent transparent transparent;
+	background: transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+	background: #5b6075;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+	background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
+	border-color: #5b6075 transparent transparent transparent;
+}
+
+.dark ::-webkit-scrollbar-button:single-button:vertical:increment {
+	border-color: #6b7280 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+html {
+	direction: rtl;
+}
+
+* {
+	direction: ltr;
+}
+
+.dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
+	border-color: transparent transparent #5b6075 transparent;
+}
+
+.dark ::-webkit-scrollbar-button {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.18);
+	border: 10px solid transparent;
 }
