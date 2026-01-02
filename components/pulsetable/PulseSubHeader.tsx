@@ -27,7 +27,7 @@ export default function NewPairsHeaderWithTradingSettings({ title }: Props) {
 		<>
 			{/* ================= HEADER ================= */}
 			<div className="sticky top-0 z-30 w-full">
-				<div className="hidden sm:flex min-h-[48px] border-b border-primaryStroke px-[12px] items-center gap-[12px]">
+				<div className="hidden lg:flex min-h-[48px] border-b border-primaryStroke px-[12px] items-center gap-[12px]">
 					<span className="text-textPrimary text-[16px] font-medium flex-1">
 						{/* New Pairs */}
 						{title}

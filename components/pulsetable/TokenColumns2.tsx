@@ -13,7 +13,6 @@ import { splitPinned } from "@/lib/pinTokens";
 import { SortState } from "@/types/sort";
 import { TokenColumnSkeleton } from "../skeletons/tokenColumnSkeleton";
 import "@/app/globals.css";
-import Tooltip from "../additional/Tooltiphelper";
 
 type Props = {
 	title: string;
@@ -23,9 +22,9 @@ type Props = {
 	};
 };
 
-const ROW_HEIGHT = 116;
+const ROW_HEIGHT = 142;
 
-export default function TokenColumn({ title, scrollSync }: Props) {
+export default function TokenColumn2({ title, scrollSync }: Props) {
 	const parentRef = useRef<HTMLDivElement>(null);
 
 	const queryClient = useQueryClient();
@@ -64,7 +63,7 @@ export default function TokenColumn({ title, scrollSync }: Props) {
 	};
 
 	return (
-		<div className="flex flex-col w-full min-w-[360px]">
+		<div className="flex flex-col w-full min-w-[300px]">
 			{/* SCROLL CONTAINER */}
 			<div
 				ref={setRefs}

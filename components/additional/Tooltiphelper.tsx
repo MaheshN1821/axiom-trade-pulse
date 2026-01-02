@@ -45,7 +45,7 @@ const Tooltip = ({ label, children }: TooltipProps) => {
 	}, []);
 
 	return (
-		<div ref={wrapperRef} className="relative inline-flex group">
+		<div ref={wrapperRef} className="relative lg:inline-flex group">
 			{children}
 
 			<span

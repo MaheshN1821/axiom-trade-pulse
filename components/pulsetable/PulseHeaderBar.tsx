@@ -6,44 +6,48 @@ import BlacklistModalButton from "./PulseBlackListButton";
 import PulseHotkeysModal from "./PulseHotKeysModels";
 import PulseSnipeSettingsModal from "./PulseSnipeSettingModel";
 import WalletDropdown from "./pulseWalletDropdown";
+import Image from "next/image";
 
 const PulseHeaderBar = () => {
 	return (
-		<div className="flex-none flex flex-row w-full h-[32px] justify-start items-center">
-			{/* Left: Title + Chain Switch */}
-			<div className="flex-1 flex items-center gap-3">
-				<span className="text-textPrimary text-[20px] font-medium">Pulse</span>
+		<>
+			<div className="flex-none hidden sm:flex flex-row w-full h-[32px] justify-start items-center">
+				{/* Left: Title + Chain Switch */}
+				<div className="flex-1 flex items-center gap-3">
+					<span className="text-textPrimary text-[20px] font-medium">
+						Pulse
+					</span>
 
-				<div className="flex items-center gap-1">
-					<ChainButton
-						active
-						label="Switch to Solana"
-						icon="/images/sol-fill.svg"
-					/>
-					<ChainButton
-						label="Switch to BNB"
-						icon="/images/bnb-fill.svg"
-						grayscale
-					/>
+					<div className="flex items-center gap-1">
+						<ChainButton
+							active
+							label="Switch to Solana"
+							icon="/images/sol-fill.svg"
+						/>
+						<ChainButton
+							label="Switch to BNB"
+							icon="/images/bnb-fill.svg"
+							grayscale
+						/>
+					</div>
 				</div>
-			</div>
 
-			<div className="pr-[8px]" />
+				<div className="pr-[8px]" />
 
-			{/* Right: Actions */}
-			<div className="flex flex-row gap-4 items-center">
-				<span className="contents">
-					<button
-						type="button"
-						className="flex flex-row w-[24px] h-[24px] justify-center items-center"
-					>
-						<i className="ri-question-line text-[20px] text-textTertiary hover:text-textSecondary transition-all duration-150 ease-in-out"></i>
-					</button>
-				</span>
+				{/* Right: Actions */}
+				<div className="flex flex-row gap-4 items-center">
+					<span className="contents">
+						<button
+							type="button"
+							className="flex flex-row w-[24px] h-[24px] justify-center items-center"
+						>
+							<i className="ri-question-line text-[20px] text-textTertiary hover:text-textSecondary transition-all duration-150 ease-in-out"></i>
+						</button>
+					</span>
 
-				<DisplayDropdownContainer />
+					<DisplayDropdownContainer />
 
-				{/* <span className="contents">
+					{/* <span className="contents">
 					<button
 						type="button"
 						className="-mr-[5px] group flex items-center justify-center w-8 h-8 bg-background hover:bg-primaryStroke/60 transition-colors relative rounded-full"
@@ -67,17 +71,113 @@ const PulseHeaderBar = () => {
 					</button>
 				</span> */}
 
-				<BlacklistModalButton />
+					<BlacklistModalButton />
 
-				<PulseHotkeysModal />
+					<PulseHotkeysModal />
 
-				<PulseAlertsModal />
+					<PulseAlertsModal />
 
-				<PulseSnipeSettingsModal />
+					<PulseSnipeSettingsModal />
 
-				<WalletDropdown />
+					<WalletDropdown />
+				</div>
 			</div>
-		</div>
+			<div className="flex sm:hidden flex-row w-full h-[24px] gap-[8px] justify-between items-center">
+				<div className="flex flex-row items-center gap-[8px] flex-1 min-w-0">
+					<div className="flex items-center gap-1">
+						<button
+							type="button"
+							className="
+                  relative flex items-center justify-center
+                  w-[32px] h-[32px] rounded-full
+                  transition-all duration-150
+                  bg-primaryStroke/60 scale-110
+                "
+							aria-label="Switch to Solana"
+						>
+							<Image
+								alt="SOL"
+								loading="lazy"
+								width={20}
+								height={20}
+								decoding="async"
+								data-nimg="1"
+								className=""
+								src="/images/sol-fill.svg"
+								style={{ color: "transparent" }}
+							/>
+						</button>
+						<button
+							type="button"
+							className="
+                  relative flex items-center justify-center
+                  w-[32px] h-[32px] rounded-full
+                  transition-all duration-150
+                  hover:bg-primaryStroke/30 opacity-60 hover:opacity-100
+                "
+							aria-label="Switch to BNB"
+						>
+							<Image
+								alt="BNB"
+								loading="lazy"
+								width={20}
+								height={20}
+								decoding="async"
+								data-nimg="1"
+								className="grayscale-[0.3]"
+								src="/images/bnb-fill.svg"
+								style={{ color: "transparent" }}
+							/>
+						</button>
+					</div>
+					<div className="relative flex flex-row flex-1 min-w-0">
+						<div className="flex flex-row gap-[8px] items-center overflow-x-auto overflow-y-hidden [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+							<button
+								className="text-nowrap flex flex-row h-[32px] px-[12px] gap-[4px] justify-center items-center min-w-max 
+          rounded-full 
+          bg-secondaryStroke text-textPrimary active:scale-[0.98] active:opacity-[0.95] transition-all duration-[65ms] ease-out
+          h-[24px]"
+							>
+								<div className="flex flex-row flex-1 h-[32px] gap-[4px] justify-center items-center">
+									<span className="text-[14px] font-medium">New Pairs</span>
+								</div>
+							</button>
+							<button
+								className="text-nowrap flex flex-row h-[32px] px-[12px] gap-[4px] justify-center items-center min-w-max 
+          rounded-full 
+          bg-secondary/80 text-textTertiary active:text-textSecondary active:scale-[0.98] active:opacity-[0.95] transition-all duration-[65ms] ease-out
+          h-[24px]"
+							>
+								<div className="flex flex-row flex-1 h-[32px] gap-[4px] justify-center items-center">
+									<span className="text-[14px] font-medium">Final Stretch</span>
+								</div>
+							</button>
+							<button
+								className="text-nowrap flex flex-row h-[32px] px-[12px] gap-[4px] justify-center items-center min-w-max 
+          rounded-full 
+          bg-secondary/80 text-textTertiary active:text-textSecondary active:scale-[0.98] active:opacity-[0.95] transition-all duration-[65ms] ease-out
+          h-[24px]"
+							>
+								<div className="flex flex-row flex-1 h-[32px] gap-[4px] justify-center items-center">
+									<span className="text-[14px] font-medium">Migrated</span>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div className="flex items-center gap-[8px]">
+					<button
+						type="button"
+						className="relative border border-primaryStroke bg-transparent text-textSecondary min-w-[36px] h-[36px] pl-[9px] pr-[6px] gap-[7px] flex justify-center items-center rounded-full active:scale-[0.96] active:bg-primaryStroke/40 transition-scale duration-[65ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
+					>
+						<div className="flex flex-row gap-[4px] items-center">
+							<span className="text-[14px] font-medium">P1</span>
+						</div>
+						<i className="ri-settings-3-line text-[20px] transition-all duration-[135ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"></i>
+					</button>
+				</div>
+			</div>
+		</>
 	);
 };
 
