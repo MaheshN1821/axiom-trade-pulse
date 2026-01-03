@@ -46,6 +46,11 @@ export default function TokenColumn2({ title, scrollSync }: Props) {
 		startMockTokenSocket(queryClient, title);
 	}, [queryClient, title]);
 
+	// useEffect(() => {
+	// 	fetch("/api/socket");
+	// 	initSocket(queryClient, title);
+	// }, [queryClient, title]);
+
 	const rowVirtualizer = useVirtualizer({
 		count: visibleTokens.length,
 		getScrollElement: () => parentRef.current,

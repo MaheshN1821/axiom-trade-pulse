@@ -306,7 +306,7 @@ export default function PulseFooter() {
 			<div className="sm:hidden z-30 ios-h-fix">
 				<div className="mobile-navbar flex flex-col w-full bg-background border-primaryStroke/0 border-t justify-start items-center">
 					<div className="flex flex-row justify-evenly items-center w-full h-[56px]">
-						<a href="/discover">
+						<a href="/discover" aria-label="Open discover page">
 							<button className="group flex flex-col justify-center items-center gap-[4px] ">
 								<div className="h-[20px] flex items-center justify-center">
 									<i
@@ -319,7 +319,7 @@ export default function PulseFooter() {
 								</span>
 							</button>
 						</a>
-						<a href="/trackers?chain=sol">
+						<a href="/trackers?chain=sol" aria-label="Open trackers page">
 							<button className="group flex flex-col justify-center items-center gap-[4px] ">
 								<div className="h-[20px] flex items-center justify-center">
 									<i
@@ -332,7 +332,7 @@ export default function PulseFooter() {
 								</span>
 							</button>
 						</a>
-						<a href="/pulse?chain=sol">
+						<a href="/pulse?chain=sol" aria-label="Open Pulse page">
 							<button className="group flex flex-col justify-center items-center gap-[4px] ">
 								<div className="h-[20px] flex items-center justify-center">
 									<i
@@ -345,7 +345,7 @@ export default function PulseFooter() {
 								</span>
 							</button>
 						</a>
-						<a href="/perpetuals?chain=sol">
+						<a href="/perpetuals?chain=sol" aria-label="Open Perpetuals page">
 							<button className="group flex flex-col justify-center items-center gap-[4px] ">
 								<div className="h-[20px] flex items-center justify-center">
 									<i
@@ -358,7 +358,7 @@ export default function PulseFooter() {
 								</span>
 							</button>
 						</a>
-						<a href="/portfolio?chain=sol">
+						<a href="/portfolio?chain=sol" aria-label="Open portfolio page">
 							<button className="group flex flex-col justify-center items-center gap-[4px] ">
 								<div className="h-[20px] flex items-center justify-center">
 									<i

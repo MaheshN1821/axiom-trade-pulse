@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const TopNavTabs = () => {
 	const NAV_ITEMS = [
-		{ label: "Discover", href: "/discover?chain=sol", active: false },
-		{ label: "Pulse", href: "/pulse?chain=sol", active: true },
-		{ label: "Trackers", href: "/trackers?chain=sol", active: false },
-		{ label: "Perpetuals", href: "/perpetuals?chain=sol", active: false },
-		{ label: "Yield", href: "/yield?chain=sol", active: false },
-		{ label: "Vision", href: "/vision?chain=sol", active: false },
-		{ label: "Portfolio", href: "/portfolio?chain=sol", active: false },
-		{ label: "Rewards", href: "/rewards?chain=sol", active: false },
+		{ label: "Discover", href: "/", active: false },
+		{ label: "Pulse", href: "/", active: true },
+		{ label: "Trackers", href: "/", active: false },
+		{ label: "Perpetuals", href: "/", active: false },
+		{ label: "Yield", href: "/", active: false },
+		{ label: "Vision", href: "/", active: false },
+		{ label: "Portfolio", href: "/", active: false },
+		{ label: "Rewards", href: "/", active: false },
 	];
 
 	return (

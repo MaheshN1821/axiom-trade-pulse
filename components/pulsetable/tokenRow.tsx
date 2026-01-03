@@ -33,6 +33,7 @@ export default function TokenRow({ token, style, title }: Props) {
 										type="button"
 										className="absolute z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-0 text-textTertiary hover:text-primaryBlueHover w-[24px] h-[24px] flex items-center justify-center rounded-[4px] bg-backgroundTertiary border border-secondaryStroke/50"
 										style={{ top: "6px", left: "6px" }}
+										aria-label="Open token details"
 									>
 										<i className="ri-eye-off-line text-[14px]"></i>
 									</button>
@@ -42,6 +43,7 @@ export default function TokenRow({ token, style, title }: Props) {
 										type="button"
 										className="absolute z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-0 bg-backgroundTertiary text-textTertiary hover:text-primaryBlueHover w-[24px] h-[24px] flex items-center justify-center rounded-[4px] border border-secondaryStroke/50"
 										style={{ top: "32px", left: "6px" }}
+										aria-label="Open token details"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +70,7 @@ export default function TokenRow({ token, style, title }: Props) {
 										type="button"
 										className="absolute z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-0 bg-backgroundTertiary text-textTertiary hover:text-primaryBlueHover w-[24px] h-[24px] flex items-center justify-center rounded-[4px] border border-secondaryStroke/50"
 										style={{ top: "58px", left: "6px" }}
+										aria-label="Open token details"
 									>
 										{/* <i
 										className="icon-at-off-line"
@@ -98,6 +101,7 @@ export default function TokenRow({ token, style, title }: Props) {
 												type="button"
 												className="bg-primaryBlue hover:bg-primaryBlueHover text-[#090909] flex flex-row gap-[4px] justify-center items-center rounded-[999px] h-[24px] whitespace-nowrap transition-all duration-0 relative overflow-hidden group/quickBuyButton  "
 												style={{ paddingLeft: "6px", paddingRight: "6px" }}
+												aria-label="Open token details"
 											>
 												<i className="ri-flashlight-fill text-[16px] flex items-center relative z-10"></i>
 												<span className="text-[12px] font-bold  relative z-10">
@@ -114,6 +118,7 @@ export default function TokenRow({ token, style, title }: Props) {
 												type="button"
 												className="bg-primaryBlue hover:bg-primaryBlueHover text-[#090909] flex flex-row gap-[4px] justify-center items-center rounded-[999px] h-[24px] whitespace-nowrap transition-all duration-0 relative overflow-hidden group/quickBuyButton  "
 												style={{ paddingLeft: "6px", paddingRight: "6px" }}
+												aria-label="Open token details"
 											>
 												<i className="ri-flashlight-fill text-[16px] flex items-center relative z-10"></i>
 												<span className="text-[12px] font-bold  relative z-10">
@@ -275,10 +280,13 @@ export default function TokenRow({ token, style, title }: Props) {
 																decoding="async"
 																data-nimg="1"
 																className="rounded-[1px] w-[68px] h-[68px] object-cover"
-																src={token.image}
+																src={token?.image}
 															></Image>
 														</div>
-														<button className="absolute inset-0 bg-black/50 opacity-0 group-hover/image:opacity-100 transition-opacity duration-200 flex items-center justify-center ">
+														<button
+															aria-label="Open token details"
+															className="absolute inset-0 bg-black/50 opacity-0 group-hover/image:opacity-100 transition-opacity duration-200 flex items-center justify-center "
+														>
 															<i className="ri-camera-line text-white text-[24px]"></i>
 														</button>
 													</div>
@@ -343,6 +351,7 @@ export default function TokenRow({ token, style, title }: Props) {
 											<span className="text-textTertiary text-[12px] font-medium text-center max-w-[74px]">
 												<button
 													type="button"
+													aria-label="Open token details"
 													className="text-textTertiary hover:text-primaryBlueHover transition-colors duration-[125ms] text-[12px] font-medium text-center max-w-[74px] flex items-center gap-[4px] group/copy"
 												>
 													<span>{token.shortAddress}</span>
@@ -363,6 +372,7 @@ export default function TokenRow({ token, style, title }: Props) {
 																<span className="contents">
 																	<button
 																		type="button"
+																		aria-label="Open token details"
 																		className="flex flex-row gap-[4px] justify-start items-center text-textTertiary hover:text-primaryBlueHover transition-colors duration-[125ms] min-w-0 overflow-hidden"
 																	>
 																		<div className="min-w-0 whitespace-nowrap overflow-hidden truncate text-inherit text-[16px] sm:text-[16px] lg:text-[14px] xl:text-[16px] text-left font-medium tracking-[-0.02em] xl:truncate xl:max-w-full block">

@@ -13,7 +13,6 @@ import { splitPinned } from "@/lib/pinTokens";
 import { SortState } from "@/types/sort";
 import { TokenColumnSkeleton } from "../skeletons/tokenColumnSkeleton";
 import "@/app/globals.css";
-import Tooltip from "../additional/Tooltiphelper";
 
 type Props = {
 	title: string;
@@ -30,7 +29,9 @@ export default function TokenColumn({ title, scrollSync }: Props) {
 
 	const queryClient = useQueryClient();
 
-	const { data: tokens = [], isLoading } = useTokens(title);
+	const { data, isLoading } = useTokens(title);
+
+	const tokens = Array.isArray(data) ? data : [];
 
 	const [sort, setSort] = useState<SortState>({
 		key: "marketCap",

@@ -45,13 +45,6 @@ export default function Pulse() {
 							</div>
 						</div>
 					</div>
-					{/* <div className="flex flex-col flex-1 lg:hidden w-full h-full lg:px-[24px] overflow-hidden justify-start items-start rounded-[8px] sm:rounded-[4px]">
-						<div className=" flex flex-1 flex-col h-full justify-start items-center overflow-hidden">
-							<div className="flex w-[100%] relative">
-								<TokenColumn title="New Pairs" scrollSync={scrollSync} />
-							</div>
-						</div>
-					</div> */}
 					<div className="flex flex-col flex-1 lg:hidden border-primaryStroke bg-backgroundSecondary border-[1px] flex flex-row w-full justify-start items-start rounded-[8px] sm:rounded-[4px] overflow-hidden">
 						<div className="flex flex-1 h-full bg-backgroundSecondary rounded-[8px] sm:rounded-[4px] overflow-hidden">
 							<div className="border-r-[1px] border-primaryStroke flex flex-1 flex-col h-full justify-start items-center overflow-hidden">

@@ -7,7 +7,7 @@ export function startMockTokenSocket(queryClient: QueryClient, column: string) {
 		queryClient.setQueryData<TokenRowData[]>(
 			queryKeys.tokens(column),
 			(old) => {
-				if (!old) return old;
+				if (!Array.isArray(old)) return old;
 
 				return old.map((token) => {
 					// randomly update 1–2 fields
