@@ -13,3 +13,7 @@ app.get("/tokens", (_, res) => {
 app.listen(4000, () => {
 	console.log("REST API running on http://localhost:4000");
 });
+
+// NOTE:
+// This Express + WebSocket server is for local development only.
+// It is intentionally excluded from the Next.js build and not deployed to Vercel.
