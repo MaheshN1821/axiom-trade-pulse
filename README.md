@@ -1,4 +1,4 @@
-#Axiom SOL | Pulse — Token Trading Table
+## Axiom SOL | Pulse — Token Trading Table
 
 ## Overview
 A high-performance, real-time crypto token trading table inspired by modern Solana trading terminals.
@@ -18,21 +18,22 @@ Built with Next.js, TypeScript, Tailwind CSS, and WebSockets, focusing on speed,
 - Optimized rendering for large token lists
 - Dark-mode optimized UI
 
-## Tech Stack
+# Tech Stack
 
-# Frontend
+## Frontend
 - Next.js (App Router)
 - TypeScript
 - React
 - Tailwind CSS
 - React Query
 
-# Backend
+## Backend
 - Node.js
 - REST API
 - WebSocket (ws)
 
 ## Data Flow
+
 1. REST API (Initial Load)
 - Frontend fetches token data from /api/tokens
 - Provides immediate data for first render
@@ -50,13 +51,13 @@ WebSockets for low-latency live updates
 ## Responsive Design
 
 ### Desktop (1440px)
-![Desktop 1440px](screenshots/1440.png)
+![Desktop 1440px](public/screenshots/1440.png)
 
 ### Tablet (768px)
-![Tablet 768px](screenshots/768.png)
+![Tablet 768px](public/screenshots/768.png)
 
 ### Mobile - Large (375px)
-![Mobile 320px](screenshots/375.png)
+![Mobile 320px](public/screenshots/375.png)
 
 ### Mobile - Small (320px)
-![Mobile 320px](screenshots/320.png)
+![Mobile 320px](public/screenshots/320.png)
