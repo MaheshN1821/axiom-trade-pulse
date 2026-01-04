@@ -61,3 +61,6 @@ WebSockets for low-latency live updates
 
 ### Mobile - Small (320px)
 ![Mobile 320px](public/screenshots/320.png)
+
+## Lighthouse Report
+![Desktop](public/screenshots/desktop-lighthouse.png)
